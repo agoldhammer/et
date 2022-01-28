@@ -1,0 +1,11 @@
+table = response.xpath('//main/section/div[@class="container"]/div[@class="stats__share-table"]')
+table2 = table.xpath("//div[@class='stats__share-table']")
+table2.xpath("//ul/li")
+
+table2.xpath("//ul/li/div[@class='stats__stat-name']")
+table2.xpath("//ul/li/div[@class='stats__stat-name']/text()").get() "gets death all causes"
+table2.xpath("//ul/li/div[@class='stats__stat-number ']") space is essential here
+response.css("ul li div.stats__stat-name")
+response.css("ul li div.stats__stat-number ")
+
+https://www.scrapingbee.com/blog/scrapy-javascript/

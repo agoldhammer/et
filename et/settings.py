@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-from shutil import which
+# from shutil import which
 
 SELENIUM_DRIVER_NAME = 'chrome'
 

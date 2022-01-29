@@ -9,11 +9,13 @@
 
 from shutil import which
 
-SELENIUM_DRIVER_NAME = 'firefox'
+SELENIUM_DRIVER_NAME = 'chrome'
 
-SELENIUM_DRIVER_EXECUTABLE_PATH = which('geckodriver')
+# SELENIUM_DRIVER_EXECUTABLE_PATH = which('chromedriver')
+# see https://stackoverflow.com/questions/66157915/keyerror-driver-in-printresponse-request-metadriver-title
+SELENIUM_DRIVER_EXECUTABLE_PATH = "/usr/local/bin/chromedriver"
 
-SELENIUM_DRIVER_ARGUMENTS = ['-headless']
+SELENIUM_DRIVER_ARGUMENTS = ['--headless --disable-gpu --no-sandbox']
 
 DOWNLOADER_MIDDLEWARES = {
 
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'et.middlewares.EtDownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    'et.middlewares.EtDownloaderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
